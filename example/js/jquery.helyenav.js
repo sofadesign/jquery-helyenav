@@ -1,8 +1,28 @@
+/*
+ *  jQuery HelyeNav plugin
+ *  ======================
+ *
+ *  @desc HelyeNav is a simple on level Accordion vertical menu. 
+ *        It's fully accessible, non obstrusive, and uses a cookie to 
+ *        remember the current opened menu through pages.
+ *
+ *
+ *  @require jQuery 1.3.x
+ *  @require [jQuery Cookie Plugin](http://dev.jquery.com/browser/trunk/plugins/cookie/)
+ *
+ *  -- License --
+ *  Copyright (c) 2009 Fabrice Luraine  
+ *  Published under [MIT license](http://www.opensource.org/licenses/mit-license.php)
+ *  --
+ *
+ */
+
 (function($) {
     // PLUGIN DEFINITION
     $.fn.helyenav = function(options) {
         // init plugin and build options before elemnts iteration
         var opts = $.extend({}, $.fn.helyenav.defaults, options);
+        $.helyenav.opts = opts;
         $.helyenav.current = opts.current;      
         
         return this.each(function() {
@@ -42,7 +62,7 @@
        
            // private
            function subnav(name){
-               return $(this.container).find("." + name + ' > ul');
+               return $(this.container).find("." + name + ' > ' + $.helyenav.opts.childBlockElt);
            }
         }
     };
