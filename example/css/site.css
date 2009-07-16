@@ -48,4 +48,22 @@ p.title {
 
 #header p.title { font-size: 3em; line-height: 1; margin-bottom: 0.5em; }
 
+#nav {
+    width: 400px;
+    float:left;
+    
+}
+#nav li {
+    list-style:none;
+}
+#nav li h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0 0;
+}
+#nav li h2 a {
+    text-decoration:none;
+}
+#content {
+    margin-top: 2em;
+}
 /* EOF */
