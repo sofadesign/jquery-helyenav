@@ -57,6 +57,7 @@
                     }
                     if(current==name){
                        subnav(name).slideDown(opts.speed);
+                       $.cookie(opts.cookieName, current, { path: opts.cookiePath});
                     }
               });
            }
