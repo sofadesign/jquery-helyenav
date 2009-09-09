@@ -52,6 +52,7 @@
               $.each(subnavsNames, function(i, name){
                  if($.cookie(opts.cookieName)==name){
                        subnav(name).show();
+                       subnav(name).css('display', 'block'); /* for FF2, in case it's inline */
                        subnav(name).slideUp(opts.speed);
                     }
                     if(current==name){
